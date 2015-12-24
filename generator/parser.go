@@ -20,7 +20,7 @@ package generator
 import (
 	"flag"
 	"fmt"
-	"github.com/pquerna/ffjson/shared"
+	"github.com/foreversmart/ffjson/shared"
 	"go/ast"
 	"go/doc"
 	"go/parser"

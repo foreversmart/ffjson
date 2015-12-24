@@ -18,8 +18,8 @@
 package tff
 
 import (
-	"github.com/pquerna/ffjson/ffjson"
-	fflib "github.com/pquerna/ffjson/fflib/v1"
+	"github.com/foreversmart/ffjson/ffjson"
+	fflib "github.com/foreversmart/ffjson/fflib/v1"
 	"github.com/stretchr/testify/require"
 
 	"bytes"

@@ -3,27 +3,27 @@ all: test install
 	@echo "Done"
 
 install:
-	go install github.com/pquerna/ffjson
+	go install github.com/foreversmart/ffjson
 
 deps:
 
 fmt:
-	go fmt github.com/pquerna/ffjson/...
+	go fmt github.com/foreversmart/ffjson/...
 
 cov:
 	# TODO: cleanup this make target.
 	mkdir -p coverage
 	rm -f coverage/*.html
-	# gocov test github.com/pquerna/ffjson/generator | gocov-html > coverage/generator.html
-	# gocov test github.com/pquerna/ffjson/inception | gocov-html > coverage/inception.html
-	gocov test github.com/pquerna/ffjson/fflib/v1 | gocov-html > coverage/fflib.html
+	# gocov test github.com/foreversmart/ffjson/generator | gocov-html > coverage/generator.html
+	# gocov test github.com/foreversmart/ffjson/inception | gocov-html > coverage/inception.html
+	gocov test github.com/foreversmart/ffjson/fflib/v1 | gocov-html > coverage/fflib.html
 	@echo "coverage written"
 
 test-core:
-	go test -v github.com/pquerna/ffjson/fflib/v1 github.com/pquerna/ffjson/generator github.com/pquerna/ffjson/inception
+	go test -v github.com/foreversmart/ffjson/fflib/v1 github.com/foreversmart/ffjson/generator github.com/foreversmart/ffjson/inception
 
 test: ffize test-core
-	go test -v github.com/pquerna/ffjson/tests/...
+	go test -v github.com/foreversmart/ffjson/tests/...
 
 ffize: install
 	ffjson tests/ff.go
@@ -32,12 +32,12 @@ ffize: install
 	ffjson tests/types/ff/everything.go
 
 bench: ffize all
-	go test -v -benchmem -bench MarshalJSON  github.com/pquerna/ffjson/tests
-	go test -v -benchmem -bench MarshalJSON  github.com/pquerna/ffjson/tests/goser github.com/pquerna/ffjson/tests/go.stripe
-	go test -v -benchmem -bench UnmarshalJSON  github.com/pquerna/ffjson/tests/goser github.com/pquerna/ffjson/tests/go.stripe
+	go test -v -benchmem -bench MarshalJSON  github.com/foreversmart/ffjson/tests
+	go test -v -benchmem -bench MarshalJSON  github.com/foreversmart/ffjson/tests/goser github.com/foreversmart/ffjson/tests/go.stripe
+	go test -v -benchmem -bench UnmarshalJSON  github.com/foreversmart/ffjson/tests/goser github.com/foreversmart/ffjson/tests/go.stripe
 
 clean:
-	go clean -i github.com/pquerna/ffjson/...
+	go clean -i github.com/foreversmart/ffjson/...
 	rm -f tests/*/ff/*_ffjson.go tests/*_ffjson.go
 
 .PHONY: deps clean test fmt install all

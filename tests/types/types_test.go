@@ -19,7 +19,7 @@ package types
 
 import (
 	"encoding/json"
-	ff "github.com/pquerna/ffjson/tests/types/ff"
+	ff "github.com/foreversmart/ffjson/tests/types/ff"
 	"reflect"
 	"testing"
 )

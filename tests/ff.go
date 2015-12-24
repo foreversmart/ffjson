@@ -1293,7 +1293,7 @@ type TReTyped struct {
 	Pp ReTypedPp
 	Qp ReTypedQp
 	Rp ReTypedRp
-	// FIXME: https://github.com/pquerna/ffjson/issues/108
+	// FIXME: https://github.com/foreversmart/ffjson/issues/108
 	//Sp ReTypedSp
 
 	// Bug in encoding/json: Bug in encoding/json: json: cannot unmarshal string into Go value of type tff.ReTypedAa
@@ -1346,7 +1346,7 @@ type TReTyped struct {
 	Rra  ReReTypedA
 	Rrs  ReReTypedS
 	Rrap ReReTypedAp
-	// FIXME: https://github.com/pquerna/ffjson/issues/108
+	// FIXME: https://github.com/foreversmart/ffjson/issues/108
 	// Rrsp  ReReTypedSp
 	// Rrxc  ReReTypedXc
 	// Rrxd  ReReTypedXd
@@ -1404,7 +1404,7 @@ type XReTyped struct {
 	Pp ReTypedPp
 	Qp ReTypedQp
 	Rp ReTypedRp
-	// FIXME: https://github.com/pquerna/ffjson/issues/108
+	// FIXME: https://github.com/foreversmart/ffjson/issues/108
 	//Sp ReTypedSp
 
 	// Bug in encoding/json: Bug in encoding/json: json: cannot unmarshal string into Go value of type tff.ReTypedAa
@@ -1457,7 +1457,7 @@ type XReTyped struct {
 	Rra  ReReTypedA
 	Rrs  ReReTypedS
 	Rrap ReReTypedAp
-	// FIXME: https://github.com/pquerna/ffjson/issues/108
+	// FIXME: https://github.com/foreversmart/ffjson/issues/108
 	// Rrsp  ReReTypedSp
 	// Rrxc  ReReTypedXc
 	// Rrxd  ReReTypedXd

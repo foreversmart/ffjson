@@ -20,7 +20,7 @@ package ffjsoninception
 import (
 	"errors"
 	"fmt"
-	"github.com/pquerna/ffjson/shared"
+	"github.com/foreversmart/ffjson/shared"
 	"io/ioutil"
 	"os"
 	"reflect"
