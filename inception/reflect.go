@@ -159,7 +159,7 @@ func extractFields(obj interface{}) []*StructField {
 				if sf.PkgPath != "" { // unexported
 					continue
 				}
-				tag := sf.Tag.Get("json")
+				tag := sf.Tag.Get("ffjson")
 				if tag == "-" {
 					continue
 				}
