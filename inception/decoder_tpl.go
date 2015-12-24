@@ -455,11 +455,6 @@ var ujFuncTxt = `
 {{$si := .SI}}
 {{$ic := .IC}}
 
-func (uj *{{.SI.Name}}) UnmarshalJSON(input []byte) error {
-	fs := fflib.NewFFLexer(input)
-    return uj.UnmarshalJSONFFLexer(fs, fflib.FFParse_map_start)
-}
-
 func (uj *{{.SI.Name}}) UnmarshalJSONFFLexer(fs *fflib.FFLexer, state fflib.FFParseState) error {
 	var err error = nil
 	currentKey := ffj_t_{{.SI.Name}}base

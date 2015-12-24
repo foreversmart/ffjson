@@ -470,20 +470,20 @@ func CreateMarshalJSON(ic *Inception, si *StructInfo) error {
 	conditionalWrites := lastConditional(si.Fields)
 	out := ""
 
-	out += `func (mj *` + si.Name + `) MarshalJSON() ([]byte, error) {` + "\n"
-	out += `var buf fflib.Buffer` + "\n"
-
-	out += `if mj == nil {` + "\n"
-	out += `  buf.WriteString("null")` + "\n"
-	out += "  return buf.Bytes(), nil" + "\n"
-	out += `}` + "\n"
-
-	out += `err := mj.MarshalJSONBuf(&buf)` + "\n"
-	out += `if err != nil {` + "\n"
-	out += "  return nil, err" + "\n"
-	out += `}` + "\n"
-	out += `return buf.Bytes(), nil` + "\n"
-	out += `}` + "\n"
+	// out += `func (mj *` + si.Name + `) MarshalJSON() ([]byte, error) {` + "\n"
+	// out += `var buf fflib.Buffer` + "\n"
+	//
+	// out += `if mj == nil {` + "\n"
+	// out += `  buf.WriteString("null")` + "\n"
+	// out += "  return buf.Bytes(), nil" + "\n"
+	// out += `}` + "\n"
+	//
+	// out += `err := mj.MarshalJSONBuf(&buf)` + "\n"
+	// out += `if err != nil {` + "\n"
+	// out += "  return nil, err" + "\n"
+	// out += `}` + "\n"
+	// out += `return buf.Bytes(), nil` + "\n"
+	// out += `}` + "\n"
 
 	out += `func (mj *` + si.Name + `) MarshalJSONBuf(buf fflib.EncodingBuffer) (error) {` + "\n"
 	out += `  if mj == nil {` + "\n"
